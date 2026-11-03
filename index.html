@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Làng Trò Chơi Dân Gian</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" aria-label="Làng Trò Chơi Dân Gian"></canvas>
+  </div>
+  <noscript>Trò chơi cần bật JavaScript để chạy.</noscript>
+
+  <!--
+    Thứ tự nạp file rất quan trọng: file sau dùng đồ của file trước.
+    Không dùng <script type="module"> vì module bị chặn khi mở file trực tiếp (file://).
+  -->
+  <script src="js/core/util.js"></script>
+  <script src="js/core/storage.js"></script>
+  <script src="js/core/audio.js"></script>
+  <script src="js/core/input.js"></script>
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/engine.js"></script>
+
+  <script src="js/scenes/menu.js"></script>
+  <script src="js/scenes/game-scene.js"></script>
+
+  <!-- Mỗi mini-game một file. Thứ tự ở đây = thứ tự trên menu. -->
+  <script src="js/games/o-an-quan.js"></script>
+  <script src="js/games/rong-ran.js"></script>
+  <script src="js/games/nhay-day.js"></script>
+  <script src="js/games/bit-mat-bat-de.js"></script>
+  <script src="js/games/dap-nieu.js"></script>
+  <script src="js/games/keo-co.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

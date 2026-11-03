@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #2b1d12;
+}
+
+/* Khung chứa canvas: căn giữa, phần thừa hai bên là viền tối */
+#wrap {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  display: block;
+  /* Chặn cuộn trang / phóng to khi chạm trên điện thoại */
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+noscript {
+  color: #fff6e0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 20px;
+}
